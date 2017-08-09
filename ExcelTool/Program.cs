@@ -25,6 +25,8 @@ namespace ExcelTool
 
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("---------若有修改以上xlsx文件,需通知服务端进行处理。若无修改，请忽略---------");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("按任意键继续");
                     Console.ReadLine();
                     Console.ResetColor(); //将控制台的前景色和背景色设为默认值
                 }
