@@ -26,6 +26,11 @@ namespace ExcelTool
             string errorString;
             DataSet dataset = xr.ReadXlsxFile(args[0], out errorString);
             p.ExportToTxt(dataset, savepath + @"\"+fileName+savefile);
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("服务端文件{0}{1}导出完毕,存放目录为：{2}",fileName,savefile,savepath);
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("---------------记得通知服务端同事进行处理---------------");
+            Console.ReadLine();
         }
         /// <summary>
         /// 导出
